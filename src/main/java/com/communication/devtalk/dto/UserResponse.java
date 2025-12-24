@@ -1,4 +1,11 @@
 package com.communication.devtalk.dto;
 
-public record UserResponse() {
-}
+import java.util.Map;
+
+public record UserResponse(
+        Long id,
+        String username,
+        String email,
+        Integer postCount,
+        Map<String, Object> settings
+) {}
