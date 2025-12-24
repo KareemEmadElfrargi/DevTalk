@@ -32,6 +32,10 @@ public class User {
     @Column(nullable = false, unique = true)
     private String email;
 
+    // Added field for Transaction demo
+    @Builder.Default
+    private Integer postCount = 0;
+
     @JdbcTypeCode(SqlTypes.JSON)
     @Column(columnDefinition = "jsonb")
     @Builder.Default
